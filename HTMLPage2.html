@@ -1,0 +1,94 @@
+﻿<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.12/angular-material.css">
+    <link rel="stylesheet" href="https://material.angularjs.org/1.1.12/docs.css">
+
+</head>
+<body ng-app="MyApp" ng-cloak>
+    <!--
+      Your HTML content here
+    -->
+    <!-- Angular Material requires Angular.js Libraries -->
+    <md-toolbar layout="row" class="md-hue-3">
+        <div class="md-toolbar-tools">
+            <span>Normal</span>
+        </div>
+    </md-toolbar>
+
+    <md-list ng-controller="ListCtrl" ng-cloak="" class="listdemoListControls" ng-app="MyApp">
+
+        <md-subheader class="md-no-sticky">Single Action Checkboxes</md-subheader>
+        <md-list-item ng-repeat="topping in toppings">
+            <p> {{ topping.name }} </p>
+            <md-checkbox class="md-secondary" ng-model="topping.wanted"></md-checkbox>
+        </md-list-item>
+
+        <md-divider></md-divider>
+
+        <md-subheader class="md-no-sticky">Secondary Buttons</md-subheader>
+        <md-list-item class="secondary-button-padding">
+            <p>Clicking the button to the right will fire the secondary action</p>
+            <md-button class="md-secondary" ng-click="doSecondaryAction($event)">More Info</md-button>
+        </md-list-item>
+        <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)">
+            <p>Click anywhere to fire the primary action, or the button to fire the secondary</p>
+            <md-button class="md-secondary" ng-click="doSecondaryAction($event)">More Info</md-button>
+        </md-list-item>
+
+        <md-divider></md-divider>
+
+        <md-subheader class="md-no-sticky">Secondary Menus</md-subheader>
+        <md-list-item>
+            <p>Click anywhere to fire the secondary action</p>
+
+            <md-menu class="md-secondary">
+                <md-button class="md-icon-button">
+                    <md-icon md-svg-icon="communication:message"></md-icon>
+                </md-button>
+                <md-menu-content width="4">
+                    <md-menu-item>
+                        <md-button>
+                            Redial
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button>
+                            Check voicemail
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-divider></md-menu-divider>
+                    <md-menu-item>
+                        <md-button>
+                            Notifications
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+
+        </md-list-item>
+
+        <md-divider></md-divider>
+
+    </md-list>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-aria.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-messages.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js"></script>
+    <script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.12/angular-material.js"></script>
+
+
+    <script src="js/app.js"></script>
+
+
+
+</body>
+</html><!DOCTYPE html>
+
